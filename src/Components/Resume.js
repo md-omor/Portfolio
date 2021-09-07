@@ -5,7 +5,7 @@ import { MdWork } from "react-icons/md";
 const Resume = ({ data }) => {
   if (data) {
     var skillmessage = data.skillmessage;
-    var education = data.education.map(function (education) {
+    let education = data.education.map(function (education) {
       return (
         <div key={education.school}>
           <h3>{education.school}</h3>
@@ -17,7 +17,7 @@ const Resume = ({ data }) => {
         </div>
       );
     });
-    var work = data.work.map(function (work) {
+    let work = data.work.map(function (work) {
       return (
         <div key={work.company}>
           <h3>{work.company}</h3>
@@ -69,7 +69,7 @@ const Resume = ({ data }) => {
         <div className="six columns education">
           <div className="single__education">
             <div className="single__education__icon">
-              <IoBookOutline className="book_icon"/>
+              <IoBookOutline className="book_icon" />
             </div>
             <div className="single__education__content">
               <span>Dhanmondi Govt Boys High School - February 2022 </span>
@@ -80,7 +80,7 @@ const Resume = ({ data }) => {
 
           <div className="single__education">
             <div className="single__education__icon">
-              <IoBookOutline className="book_icon"/>
+              <IoBookOutline className="book_icon" />
             </div>
             <div className="single__education__content">
               <span>Dhanmondi Govt Boys High School - February 2019 </span>
@@ -91,7 +91,7 @@ const Resume = ({ data }) => {
 
           <div className="single__education">
             <div className="single__education__icon">
-              <IoBookOutline className="book_icon"/>
+              <IoBookOutline className="book_icon" />
             </div>
             <div className="single__education__content">
               <span>Dhanmondi Govt Boys High School - February 2027 </span>
@@ -106,7 +106,7 @@ const Resume = ({ data }) => {
         <div className="six columns work">
           <div className="single__work">
             <div className="single__work__icon">
-              <MdWork className='worked_icon'/>
+              <MdWork className="worked_icon" />
             </div>
             <div className="single__work__content">
               <span>OM SOFTWARE - (May 2021 - Present)</span>
@@ -121,7 +121,7 @@ const Resume = ({ data }) => {
           </div>
           <div className="single__work">
             <div className="single__work__icon">
-              <MdWork className='worked_icon'/>
+              <MdWork className="worked_icon" />
             </div>
             <div className="single__work__content">
               <span>KS Devware - (April 2021 - Present)</span>
@@ -135,7 +135,7 @@ const Resume = ({ data }) => {
           </div>
           <div className="single__work">
             <div className="single__work__icon">
-              <MdWork className='worked_icon'/>
+              <MdWork className="worked_icon" />
             </div>
             <div className="single__work__content">
               <span>FN'S SOFTWARE - (January 2021 - Present)</span>

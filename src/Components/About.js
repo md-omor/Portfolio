@@ -1,4 +1,7 @@
 import React from "react";
+import {
+  BrowserRouter as Router, Link
+} from "react-router-dom";
 
 const About = ({ data }) => {
   if (data) {
@@ -11,7 +14,6 @@ const About = ({ data }) => {
     var zip = data.address.zip;
     var phone = data.phone;
     var email = data.email;
-    var resumeDownload = data.resumedownload;
   }
 
   return (
@@ -47,13 +49,16 @@ const About = ({ data }) => {
                 <span>{email}</span>
               </p>
             </div>
+            <Router>
             <div className="columns download">
               <p>
-                <a href={resumeDownload} className="button">
+                <Link to="/files/Resume.pdf" target="_blank" download className="button">
                   <i className="fa fa-download"></i>Download Resume
-                </a>
+                </Link>
               </p>
             </div>
+            </Router>
+           
           </div>
         </div>
       </div>
