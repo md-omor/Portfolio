@@ -1,7 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router, Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const About = ({ data }) => {
   if (data) {
@@ -19,8 +17,8 @@ const About = ({ data }) => {
   return (
     <section id="about">
       <div className="row">
-      <h2 className='abt'>About Me</h2>
-      <hr className='about__hr'/>
+        <h2 className="abt">About Me</h2>
+        <hr className="about__hr" />
         <div className="three columns">
           <img
             className="profile-pic"
@@ -29,9 +27,7 @@ const About = ({ data }) => {
           />
         </div>
         <div className="nine columns main-col">
-          
-
-          <p>{bio}</p>
+          <p className="bio">{bio}</p>
           <div className="row">
             <div className="columns contact-details">
               <h2>Contact Details</h2>
@@ -50,15 +46,19 @@ const About = ({ data }) => {
               </p>
             </div>
             <Router>
-            <div className="columns download">
-              <p>
-                <Link to="/files/Resume.pdf" target="_blank" download className="button">
-                  <i className="fa fa-download"></i>Download Resume
-                </Link>
-              </p>
-            </div>
+              <div className="columns download">
+                <p>
+                  <Link
+                    to="/files/MdOmorResumi.pdf"
+                    target="_blank"
+                    download
+                    className="button"
+                  >
+                    <i className="fa fa-download"></i>Download Resume
+                  </Link>
+                </p>
+              </div>
             </Router>
-           
           </div>
         </div>
       </div>
